@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Link, NavLink } from 'react-router-dom';
 
 //components
 import Home from './components/home';
@@ -13,9 +13,9 @@ const App = ()=>{
         <BrowserRouter>
             <div>
                 <header>
-                    <Link to='/'>Home</Link><br/>
-                    <Link to='/posts'>Posts</Link><br/>
-                    <Link to='profile'>Profile</Link><br/><hr/>
+                    <NavLink to='/'>Home</NavLink><br/>
+                    <NavLink to='/posts'>Posts</NavLink><br/>
+                    <NavLink to='profile'>Profile</NavLink><br/><hr/>
                 </header>
                 <Route path='/' exact component={Home} />
                 <Route path='/posts' exact component={Post} />
