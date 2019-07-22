@@ -18,8 +18,8 @@ const App = ()=>{
                     <Link to='profile'>Profile</Link><br/><hr/>
                 </header>
                 <Route path='/' exact component={Home} />
-                <Route path='/posts' component={Post} />
-                <Route path='/posts/1' component={PostItem} />
+                <Route path='/posts' exact component={Post} />
+                <Route path='/posts/:id' component={PostItem} />
                 <Route path='/profile' component={Profile} />
             </div>
             
